@@ -1,0 +1,174 @@
+/* Import the VT323 font */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+  }
+
+/* Full-Screen Height and Width */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    color: white;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('musashi.gif') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'VT323', monospace;
+    color: white;
+  }
+
+/* Move .content to the top-left corner */
+.content {
+    position: absolute; /* Absolute positioning to move it freely */
+    top: 20px; /* Move 20px from the top */
+    left: 20px; /* Move 20px from the left */
+    z-index: 1; /* Keep it above the background */
+    text-align: left; /* Align text to the left */
+    color: white;
+}
+
+/* Ensure .container is still centered */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    text-align: center; /* Center text for container */
+    color: white;
+    overflow-y: auto; /* Now added. Allow vertical scrolling */
+}
+
+/* Search Area Styles */
+/* Move #searchSection to the left middle */
+#searchSection {
+    position: absolute; /* Absolute positioning to freely move it */
+    top: 13%; /* Vertically center */
+    right: 1px; /* 20px from the left */
+    color: white;
+    transform: translateY(-50%); /* Adjust to vertically center it properly */
+    color: white; /* White text */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    width: 350px; /* Fixed width */
+}
+
+/* Input Styles */
+#searchInput {
+    padding: 10px;
+    width: calc(100% - 22px); /* Now added 50 to 100. Full width minus padding */
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: hwb(0 15% 85%);
+    color: white; /* White text */
+}
+
+#submitSection {
+    position: absolute;
+    top: 10%;
+    z-index: 2;
+}
+
+#Allarticle {
+    position: absolute;
+    top: 30%;
+}
+
+/* Button Styles */
+button {
+    background-color: #333; /* Dark button background */
+    color: #00ffff; /* Cyan button text */
+    border-color: #00ffff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-family: 'VT323', monospace;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 5px; /* Rounded corners */
+    color: white;
+}
+
+button:hover {
+    background-color: #000000; /* Cyan background on hover */
+    color: #333; /* Dark text on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+    color: white;
+}
+
+/* Header Styles */
+h1 {
+    margin: 0;
+    font-size: 2em;
+    color: white;
+}
+h2 {
+    margin: 0;
+    font-size: 2em;
+    color: white;
+}
+
+/* Increase font size for the articles in the article list */
+#articleList {
+    font-size: 1.5em; /* Adjust this value to increase or decrease font size */
+    line-height: 1.6; /* Optional: Adjust line spacing for readability */
+    list-style-type: none; /* New added. Remove bullets */
+    color: white; /* Ensure the text is visible on the background */
+}
+
+#articleList h3 {
+    font-size: 2em; /* Increase font size for article titles */
+    margin-bottom: 10px; /* Add space between titles and content */
+}
+
+#articleList p {
+    font-size: 1.2em; /* Font size for article content */
+}
+
+/* Style for article title and body */
+.article-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto; /* Center the container */
+    color: white;
+}
+
+#articleTitle {
+    font-size: 2.5rem; /* Adjust the size of the title */
+    text-align: center; /* Center the title */
+    margin-bottom: 30px; /* Add space below the title */
+    color: #00ffff; /* Cyan color for the title */
+}
+
+#articleBody {
+    font-size: 1.2rem; /* Adjust font size of the content */
+    text-align: justify; /* Justify the text */
+    line-height: 1.6; /* Increase the line height for readability */
+    white-space: pre-wrap; /* Preserve formatting (new lines) in the content */
+}
+
+/* Add scroll for long pages */
+body {
+    overflow-y: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #searchSection {
+        width: 80%; /* Make search section responsive */
+    }
+
+    .article-list-container {
+        width: 90%; /* Ensure article list adapts to smaller screens */
+    }
+}
