@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article Open</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="article-container">
-        <h1 id="articleTitle">Winter is Coming</h1>
-        <p id="articleBody"></p>
-    </div>
-
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
+<!doctypehtml><html lang=en><meta charset=UTF-8><meta content="width=device-width,initial-scale=1"name=viewport><title>Article Open</title><link href=style.css rel=stylesheet><div class=article-container><h1 id=articleTitle>Loading soon</h1><p id=articleBody></div><script>const urlParams = new URLSearchParams(window.location.search);
         const articleId = urlParams.get('id');
 
         // Fetch and display the specific article based on the ID
@@ -25,7 +10,4 @@
             })
             .catch(error => {
                 console.error('Error fetching the article:', error);
-            });
-    </script>
-</body>
-</html>
+            });</script>
